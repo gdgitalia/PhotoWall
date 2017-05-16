@@ -26,15 +26,18 @@
 
 .capture-button {
   display: block;
-  border-radius: 50%;
-  background: red;
-  width: 100px;
-  height: 100px;
-  border: 2px solid black;
+  background: #9C27B0;
+  border: 2px solid #4A148C;
   position: fixed;
-  bottom: 50px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  height: 80px;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  font-size: 1.1em;
+  text-transform: uppercase;
 }
 
 .uploading {
