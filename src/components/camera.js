@@ -135,7 +135,9 @@ class Camera extends React.Component {
           screenshotFormat="image/jpeg"
         />
 
-        <button onClick={this.handleCapture}>Capture</button>
+        <button className="capture-button" onClick={this.handleCapture}>
+          Capture
+        </button>
       </div>
     );
   }
