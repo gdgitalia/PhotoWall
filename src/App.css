@@ -24,22 +24,6 @@
   object-fit: cover;
 }
 
-.capture-button {
-  display: block;
-  background: #9C27B0;
-  border: 2px solid #4A148C;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 80px;
-  width: 100%;
-  bottom: 0;
-  color: white;
-  font-size: 1.1em;
-  text-transform: uppercase;
-}
-
 .uploading {
   display: flex;
   width: 100vw;
@@ -89,4 +73,53 @@
   overflow: hidden;
   position: absolute;
   z-index: -1;
+}
+
+.webcam {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.capture-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  width: 8rem;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FF0055;
+  border: none;
+  border-radius: 50%;
+  box-shadow: .6rem 0.6rem 2.4rem -.8rem rgba(0, 0, 0, .75);
+  color: white;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.capture-button img {
+  width: 60%;
+  animation: camera-focus infinite 5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media (min-width: 375px) {
+  .capture-button {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@keyframes camera-focus {
+  15% {
+    transform: rotate(30deg) scale(0.9);
+  }
+  17% {
+    transform: rotate(-10deg) scale(1.05);
+  }
+  20% {
+    transform: rotate(0) scale(1);
+  }
 }

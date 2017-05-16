@@ -123,6 +123,7 @@ class Camera extends React.Component {
     return (
       <div>
         <Webcam
+          className="webcam"
           width={this.state.width}
           height={this.state.height}
           audio={false}
@@ -131,7 +132,7 @@ class Camera extends React.Component {
         />
 
         <button className="capture-button" onClick={this.handleCapture}>
-          Capture
+          <img src="/camera-shot.svg" />
         </button>
       </div>
     );
