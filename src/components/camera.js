@@ -71,6 +71,19 @@ class Camera extends React.Component {
     return promise;
   };
 
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+
+    this.handleResize();
+  }
+
+  handleResize = () => {
+    this.setState({
+      width: window.innerWidth,
+      height: window.innerHeight
+    });
+  };
+
   handleCapture = () => {
     const imageSrc = this._camera.getScreenshot();
 
@@ -115,8 +128,8 @@ class Camera extends React.Component {
     return (
       <div>
         <Webcam
-          width={200}
-          height={200}
+          width={this.state.width}
+          height={this.state.height}
           audio={false}
           ref={c => (this._camera = c)}
           screenshotFormat="image/jpeg"
