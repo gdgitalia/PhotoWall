@@ -3,6 +3,7 @@ import Webcam from "react-webcam";
 import getOrientedImage from "exif-orientation-image";
 
 import Uploading from "./uploading";
+import FallbackInput from "./fallback-input";
 
 import { uploadImage } from "../utils/firebase";
 
@@ -116,15 +117,7 @@ class Camera extends React.Component {
     }
 
     if (!hasGetUserMedia()) {
-      return (
-        <input
-          onChange={this.handleInputChange}
-          type="file"
-          name="image"
-          accept="image/*"
-          capture
-        />
-      );
+      return <FallbackInput onChange={this.handleInputChange} />;
     }
 
     return (
