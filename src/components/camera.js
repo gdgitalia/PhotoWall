@@ -2,6 +2,8 @@ import React from "react";
 import Webcam from "react-webcam";
 import getOrientedImage from "exif-orientation-image";
 
+import Uploading from "./uploading";
+
 import { uploadImage } from "../utils/firebase";
 
 function hasGetUserMedia() {
@@ -110,7 +112,7 @@ class Camera extends React.Component {
 
   render() {
     if (this.state.uploading) {
-      return <h1>Uploading</h1>;
+      return <Uploading />;
     }
 
     if (!hasGetUserMedia()) {

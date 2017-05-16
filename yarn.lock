@@ -921,6 +921,10 @@ bluebird@^3.4.6:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
 
+bodymovin@^4.6.1, bodymovin@^4.6.9:
+  version "4.6.9"
+  resolved "https://registry.yarnpkg.com/bodymovin/-/bodymovin-4.6.9.tgz#4fb908c8dc1823f68ef773ae285c0e263be8218d"
+
 boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
@@ -4275,6 +4279,14 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-bodymovin@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-bodymovin/-/react-bodymovin-1.0.4.tgz#45a7aa004d3bd4c1acd13a456c41c075461c37f7"
+  dependencies:
+    bodymovin "^4.6.1"
+    react "^15.3.0"
+    react-dom "^15.3.0"
+
 react-dev-utils@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-0.5.2.tgz#50d0b962d3a94b6c2e8f2011ed6468e4124bc410"
@@ -4290,7 +4302,7 @@ react-dev-utils@^0.5.2:
     sockjs-client "1.0.1"
     strip-ansi "3.0.1"
 
-react-dom@^15.5.4:
+react-dom@^15.3.0, react-dom@^15.5.4:
   version "15.5.4"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.5.4.tgz#ba0c28786fd52ed7e4f2135fe0288d462aef93da"
   dependencies:
@@ -4371,7 +4383,7 @@ react-webcam@^0.1.0:
   dependencies:
     prop-types "^15.5.8"
 
-react@^15.5.4:
+react@^15.3.0, react@^15.5.4:
   version "15.5.4"
   resolved "https://registry.yarnpkg.com/react/-/react-15.5.4.tgz#fa83eb01506ab237cdc1c8c3b1cea8de012bf047"
   dependencies:
